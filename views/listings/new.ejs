@@ -1,0 +1,48 @@
+<% layout("/layouts/boilerplate")%>
+<body>
+   
+<div class="row">
+    <div class="col-8 offset-2">
+         <h1>create a new listing</h1>
+    <form method="post" action="/listings" class="needs-validation" 
+    novalidate enctype="multipart/form-data">
+
+      <div>  <label for="tiltle" class="form-label">Title</label><br>
+        <input type="text" name="listing[title]" class="form-control"  required><br></div> 
+
+        <div> <label for="description" class="form-label">Description</label><br>
+        <textarea type="text" name="listing[description]" class="form-control"  required></textarea>
+        <div class="invalid-feedback">description should be a valid</div><br></div> 
+
+        <div>  <label for="image" class="form-label">Upload Image</label><br>
+        <input type="file" name="listing[image]" class="form-control" required><br>
+
+       <div class="row">
+        
+            <div class="col col-md-4">  <label for="price" class="form-label">Price</label><br>
+        <input type="number" name="listing[price]"class="form-control" required>
+        <div class="invalid-feedback">price should be a valid</div><br>
+    
+    </div>
+
+       
+      
+       
+            <div class="col col-md-8">  
+            <label for="location" class="form-label">Location</label><br>
+        <input type="text" name="listing[location]"class="form-control"  required>
+        
+        <div class="invalid-feedback">enter a valid location</div><br></div> 
+
+       </div>
+
+       <div>  <label for="country" class="form-label">Country</label><br>
+        <input type="text" name="listing[country]"class="form-control"  required>
+        <div class="invalid-feedback">country should be original</div><br></div>
+        <button type="submit" class="btn btn-dark add-btn">Add</button>
+        <br><br>
+
+        
+    </form></div></div>
+    
+</body>
